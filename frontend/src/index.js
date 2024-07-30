@@ -37,7 +37,6 @@ root.render(
               <Route element={<ProtectedRoute />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/course" element={<Course />} />
-                <Route path="*" element={<Chatbot />} />
                 <Route path="/course/:courseId" element={<Weeks />} />
                 <Route path="/course/:courseId/week/:weekId" element={<WeekModule />} />
                 <Route path="/course/:courseId/week/:weekId/mcq/:assignmentId" element={<GradedAssignment />} />
@@ -45,8 +44,8 @@ root.render(
               </Route>
               <Route path='*' element={<ErrorPage />} />
             </Routes>
-            <Chatbot />
           </div>
+          <Chatbot />
         </div>
         <ToastContainer />
       </AuthProvider>
