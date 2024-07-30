@@ -21,7 +21,7 @@ db.init_app(app)
 def add_dummy_data():
     try:
         students = [
-            Student(name='Admin', email="admin@gmail.com", password_hash=bcrypt.generate_password_hash("admin")),
+            Student(name='Admin', email="admin@gmail.com", password_hash=bcrypt.generate_password_hash("123")),
         ]
         db.session.add_all(students)
         db.session.commit()
